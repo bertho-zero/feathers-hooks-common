@@ -79,7 +79,7 @@ describe('services softDelete', () => {
       user.get(0)
         .then(data => {
           assert.deepEqual(data, storeInit['0']);
-          assert.equal(user.get_call_count, 1);
+          assert.equal(user.get_call_count, 2);
           done();
         });
     });
@@ -320,7 +320,7 @@ describe('services softDelete', () => {
       user.get(0, params)
         .then(data => {
           assert.deepEqual(data, storeInit['0']);
-          assert.equal(user.get_call_count, 1);
+          assert.equal(user.get_call_count, 2);
           assert.deepEqual(getCallParams, expected);
           done();
         });
